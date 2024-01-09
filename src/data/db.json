@@ -1,0 +1,23 @@
+{
+    "navLinks":[
+        { "id": 1, "text": "Home", "url": "/" },
+       { "id": 2, "text": "About", "url": "/about"},
+       { "id": 3, "text": "Contact", "url": "/contact"},
+       { "id": 4, "text": "Resume", "url": "/resume"},
+       { "id": 4, "text": "Projects", "url": "/projects"},
+       { "id": 5, "text": "Reviews", "url": "/review"}
+
+    ],
+    "Resume":[
+        { "id": 2, "title": "Html", "url": "" },
+        { "id": 3, "title": "Css", "url": "" },
+        { "id": 4, "title": "Javascript", "url": "" },
+        { "id": 5, "title": "Boostrap", "url": "" },
+        { "id": 6, "title": "Vue3 js", "url": "" },
+        { "id": 7, "title": "Git", "url": "" }
+    ],
+    "Projects":[
+        {"title":"About me" ,"description":"My name is Siyamthanda Tsobo.I currently live in Cape Town SA. I strive for excellency and take pride in my work.I am currently at Life choices Academy improving my skills as a full-stack developer. I consistently thrive to be up to date with the latest technologies to remain relevant in the Industry"}
+    ]
+
+}
