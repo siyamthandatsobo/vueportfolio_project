@@ -38,10 +38,6 @@
         {"School":"Spesbona High","duration":"2018-2020","Qualification":"National senior Certificate","url":"https://drive.google.com/uc?export=download&id=1rLK5FStU2FR0D2zFU0G3A1IGAgPmJmXq"},
         {"School":"Mtn-bussiness Academy","duration":"2018-2020","Qualification":"Nqf5 App development.ITVARSITY","url":"https://drive.google.com/uc?export=download&id=1GF_Oux6J0RD1I1bqFwMYAhlOyIcx0Ppd"},
         {"School":"Life-choices Academy","duration":"2018-2020","Qualification":"Fullstack-web development","url":"https://drive.google.com/uc?export=download&id=1YoOLn4nMts6EnkeaIYbVEsN9WJ0HLCpM"}
-
-    "Education":[
-        {"id":1,"title":"Spesbona High" ,"qualification":"Nsc senior Certificate","yearDuration":"2018-2022","type":"High school Diploma"}
-
     ]
     
 

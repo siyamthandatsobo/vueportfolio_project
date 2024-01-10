@@ -1,18 +1,5 @@
 <template>
- <!-- <div class="container mt-5">
-  <h2 class="display-2">Skills</h2>
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col" v-for="skill in Resume" :key="skill.id">
-      <div class="card h-100 ">
-        <div class="card-body">
-          <h5 class="card-title">{{ skill.title }}</h5>
-          <p class="card-text">Description for {{ skill.title }} goes here.</p>
-        </div>
-      </div>
-    </div>
-  </div>
- </div> -->
- <h1 class="display-2 mt-5">Skills</h1>
+<h1 class="display-2 mt-5">Skills</h1>
  <div class="container">
 
      <div class="row row-cols-1 row-cols-md-3 g-3">
@@ -56,7 +43,6 @@
         </div>
     </div>
 </div>
-    
 
 </template>
 <script>
@@ -73,25 +59,17 @@ export default {
     },
     computed: {
       Resume() {
-
-        return this.$store.state.resume || [] // Access 'jobs' state from Vuex
-         // Access 'jobs' state from Vuex
-      },
-      Education() {
-        return this.$store.state.education || [] // Access 'jobs' state from Vuex
-         // Access 'jobs' state from Vuex
-      },
-
-
-
         return this.$store.state.resume || [] // Access 'resume' state from Vuex
-        return this.$store.state.Education || [] // Access 'resume' state from Vuex
-      }
+      },
+      Education(){
+        return this.$store.state.education || [] // Access 'resume' state from Vuex
 
+      }
     }
   }
 
 </script>
+
 <style scoped>
 .card {
   width: 300px;
