@@ -73,6 +73,7 @@ export default {
     },
     computed: {
       Resume() {
+
         return this.$store.state.resume || [] // Access 'jobs' state from Vuex
          // Access 'jobs' state from Vuex
       },
@@ -81,6 +82,11 @@ export default {
          // Access 'jobs' state from Vuex
       },
 
+
+
+        return this.$store.state.resume || [] // Access 'resume' state from Vuex
+        return this.$store.state.Education || [] // Access 'resume' state from Vuex
+      }
 
     }
   }
