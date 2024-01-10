@@ -4,7 +4,8 @@ import axios from 'axios';
 export default createStore({
   state: {
     navLinks: [],
-    resume:[]
+    resume:[],
+    Education:[]
   },
   mutations: {
     setNav(state, navLinks) {
@@ -12,6 +13,9 @@ export default createStore({
     },
     setResume(state, resume) {
       state.resume = resume;
+    },
+    setEducation(state, Education) {
+      state.Education = Education;
     }
   },
   actions: {
@@ -29,6 +33,16 @@ export default createStore({
         const response = await axios.get('http://localhost:3000/Resume');
         console.log(response.data); // Check the structure of response.data
         commit('setResume', response.data); // Commit the data to the Vuex store
+      } catch (error) {
+        console.error('Error fetching Resume:', error);
+      }
+    },
+    async getEducation({ commit }) {
+      try {
+        const response = await axios.get('http://localhost:3000/Education');
+        console.log(response.data); 
+        console.log("This is a test"); // Check the structure of response.data
+        commit('setEducation', response.data); // Commit the data to the Vuex store
       } catch (error) {
         console.error('Error fetching Resume:', error);
       }
