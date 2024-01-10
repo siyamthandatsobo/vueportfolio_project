@@ -1,5 +1,5 @@
 <template>
-<h1 class="display-2 mt-5">Skills</h1>
+<h1 class="display-2 mt-5 slide-in">Skills</h1>
  <div class="container container-fluid">
 
      <div class="row  row-cols-1 row-cols-md-3 g-3">
@@ -27,7 +27,7 @@
       <p class="card-text">High school Diploma</p>
     </div>
   </div> -->
-  <h1 class="mt-5 display-1" >Education</h1>
+  <h1 class="mt-5 display-1 slide-in" >Education</h1>
   <div class="container">
 
       <div class="row row-cols-1 row-cols-md-3 g-0">
@@ -106,14 +106,14 @@ export default {
 
 .card-front {
   background-color: #f0e1f0;
-  color: #fff;
+  color: #1e1b1b;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 10px solid #d772e0;
+  
   border-radius: 10px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -124,15 +124,15 @@ export default {
 }
 
 .card-back {
-  background-color: #d6dde8;
-  color: #fff;
+  background-color: #a27f9c;
+  color: #141212;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 10px solid #312f2e;
+  border: 10px solid #e600ff;
   border-radius: 10px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;

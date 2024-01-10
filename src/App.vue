@@ -11,11 +11,12 @@ export default{
 </script>
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #0d7ae6;
+  color: #ffc6e6;
+  background-color: rgb(112, 18, 76);
 }
 
 nav {
@@ -26,9 +27,24 @@ nav {
 nav a {
   font-weight: bold;
   color: #0c549c;
+  font-size:large;
 }
 
 nav a.router-link-exact-active {
   color: #000000;
 }
+.slide-in {
+  animation: slideInFromTop 1s ease-in-out; /* Modify the animation duration and timing function as needed */
+  visibility: visible;
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 </style>

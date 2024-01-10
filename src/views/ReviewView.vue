@@ -1,5 +1,5 @@
 <template>
-    <h1>Review</h1>
+    <h1 class="display-2 slide-in">Reviews</h1>
     <div class="container">
 
         <div class="row row-cols-1 row-cols-md-2  row-cols-lg-3 g-4">
@@ -51,7 +51,7 @@ export default {
   justify-content: center;
   overflow: hidden;
   perspective: 1000px;
-  box-shadow: 0 0 0 5px #fffbfb00;
+  box-shadow: 0 0 0 5px #27222200;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
