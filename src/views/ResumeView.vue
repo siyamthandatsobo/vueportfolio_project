@@ -27,7 +27,9 @@
 export default {
     methods: {
       fetchData() {
-        this.$store.dispatch('getResume'); // Dispatch the 'getdata' action
+        this.$store.dispatch('getResume');
+        this.$store.dispatch('getEducation');
+         // Dispatch the 'getdata' action
       }
     },
     mounted() {
@@ -35,7 +37,8 @@ export default {
     },
     computed: {
       Resume() {
-        return this.$store.state.resume || [] // Access 'jobs' state from Vuex
+        return this.$store.state.resume || [] // Access 'resume' state from Vuex
+        return this.$store.state.Education || [] // Access 'resume' state from Vuex
       }
     }
   }

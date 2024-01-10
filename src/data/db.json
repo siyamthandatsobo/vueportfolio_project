@@ -16,8 +16,8 @@
         { "id": 6, "title": "Vue3 js", "url": "" },
         { "id": 7, "title": "Git", "url": "" }
     ],
-    "Projects":[
-        {"title":"About me" ,"description":"My name is Siyamthanda Tsobo.I currently live in Cape Town SA. I strive for excellency and take pride in my work.I am currently at Life choices Academy improving my skills as a full-stack developer. I consistently thrive to be up to date with the latest technologies to remain relevant in the Industry"}
+    "Education":[
+        {"id":1,"title":"Spesbona High" ,"qualification":"Nsc senior Certificate","yearDuration":"2018-2022","type":"High school Diploma"}
     ]
 
 }
