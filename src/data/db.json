@@ -9,15 +9,35 @@
 
     ],
     "Resume":[
-        { "id": 2, "title": "Html", "url": "" },
-        { "id": 3, "title": "Css", "url": "" },
-        { "id": 4, "title": "Javascript", "url": "" },
-        { "id": 5, "title": "Boostrap", "url": "" },
-        { "id": 6, "title": "Vue3 js", "url": "" },
-        { "id": 7, "title": "Git", "url": "" }
+        { "id": 2, "title": "Html", "url": "https://drive.google.com/uc?export=download&id=1XhEkKw5kZIMdILq0aYsFxlrqxbxuNXJm" },
+        { "id": 3, "title": "Css", "url": "https://drive.google.com/uc?export=download&id=1RwllEgVUbx2dk7Cj4daOOqrtz_lachl3" },
+        { "id": 4, "title": "Javascript", "url": "https://drive.google.com/uc?export=download&id=1L5L8T6V1BNBNyaetz8yb_Z1tYS76avHu" },
+        { "id": 5, "title": "Boostrap", "url": "https://drive.google.com/uc?export=download&id=1Bt3cYITXEIwCXXZnfM726dRBexEO9OMm" },
+        { "id": 6, "title": "Vue3 js", "url": "https://drive.google.com/uc?export=download&id=1OomB_Ug_sY_OR3g48O_QVs38ylLWhaWN" },
+        { "id": 7, "title": "Git", "url": "https://drive.google.com/uc?export=download&id=1f7YYpDkOOkEk9xE2A2OJOr5BvD1I4gBO" }
     ],
     "Projects":[
-        {"title":"About me" ,"description":"My name is Siyamthanda Tsobo.I currently live in Cape Town SA. I strive for excellency and take pride in my work.I am currently at Life choices Academy improving my skills as a full-stack developer. I consistently thrive to be up to date with the latest technologies to remain relevant in the Industry"}
+        {"id":1 ,"name":"Royalfootwear" ,"url":"https://drive.google.com/uc?export=download&id=1HpLU9iVgxi4cOMSJQhhMLSXXY2tYh7dK","github":"","vercel":"vercel"},
+        {"id":1 ,"name":"TodoList" ,"url":"https://drive.google.com/uc?export=download&id=1sQqPGP2fXrQ0NmhQSQbFpjuKqmsygczE","github":"","vercel":""},
+        {"id":1 ,"name":"Ecommerce" ,"url":"https://drive.google.com/uc?export=download&id=1q3ciybXxsioktDrv9111BHfKXx9HoNbk","github":"","vercel":""},
+        {"id":1 ,"name":"Calculator" ,"url":"https://drive.google.com/uc?export=download&id=1H32nRi98VKEugVL9-zbgy13qrA22frkt","github":"","vercel":""},
+        {"id":1 ,"name":"Calculator" ,"url":"https://drive.google.com/uc?export=download&id=1kKm8hCRgnpOaxSKhIsu9Fyur7fNz2KEg","github":"","vercel":""},
+        {"id":1 ,"name":"Calculator" ,"url":"https://drive.google.com/uc?export=download&id=1ICY2p8qwtar9ETXQ_HGWjZZMDDxV-psG","github":"","vercel":""}
+
+    ],
+    "Reviews":[
+        {"person":"Qaqambile","review":"","url":""},
+        {"person":"Candice Amon","review":"","url":""},
+        {"person":"Sphatimandla","review":"Siyamthanda is a cheerful, friendly individual who brightens any room. She has a contagious charisma that will never fail to make you smile. She has an outstanding work ethic and an intense focus on tasks and projects, and she will be a valuable member to any team.","url":"https://drive.google.com/uc?export=download&id=1lahiwr58lOe_O9doejrAfT2EoOf5xzX7"},
+        {"person":"Calla","review":"","url":""},
+        {"person":"Joel","review":"","url":""},
+        {"person":"Matthew","review":"","url":""}
+        
+    ],
+    "Education":[
+        {"School":"Spesbona High","duration":"2018-2020","Qualification":"National senior Certificate","url":"https://drive.google.com/uc?export=download&id=1rLK5FStU2FR0D2zFU0G3A1IGAgPmJmXq"},
+        {"School":"Mtn-bussiness Academy","duration":"2018-2020","Qualification":"Nqf5 App development.ITVARSITY","url":"https://drive.google.com/uc?export=download&id=1GF_Oux6J0RD1I1bqFwMYAhlOyIcx0Ppd"},
+        {"School":"Life-choices Academy","duration":"2018-2020","Qualification":"Fullstack-web development","url":"https://drive.google.com/uc?export=download&id=1YoOLn4nMts6EnkeaIYbVEsN9WJ0HLCpM"}
     ]
     
 
