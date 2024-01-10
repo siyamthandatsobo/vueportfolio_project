@@ -6,7 +6,7 @@
             
             <div class="col" v-for="review in Reviews" :key="review.id" >
                 <div class="card">
-                    <img :src="review.url" width="325px" height="245px">
+                    <img :src="review.url" width="325px" height="310px">
                     <div class="card__content">
                         <p class="card__title">{{ review.person }}</p>
                         <p class="card__description">{{ review.review }}</p>
@@ -42,7 +42,7 @@ export default {
 <style scoped>
 .card {
   position: relative;
-  width: 350px;
+  width: 250px;
   height: 300px;
   background-color: #f2f2f2;
   border-radius: 10px;
@@ -51,13 +51,13 @@ export default {
   justify-content: center;
   overflow: hidden;
   perspective: 1000px;
-  box-shadow: 0 0 0 5px #ffffff80;
+  box-shadow: 0 0 0 5px #fffbfb00;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .card svg {
   width: 48px;
-  fill: #333;
+  fill: #ffffff;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -98,7 +98,7 @@ export default {
 .card__description {
   margin: 10px 0 0;
   font-size: 14px;
-  color: #777;
+  color: #0f0d0d;
   line-height: 1.4;
 }
 

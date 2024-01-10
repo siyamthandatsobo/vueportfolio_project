@@ -50,4 +50,8 @@ export default {
 .card-img-top{
     height:250px;
 }
+.card{
+  width:250px;
+  margin:15px;
+}
 </style>

@@ -1,10 +1,10 @@
 <template>
 <h1 class="display-2 mt-5">Skills</h1>
- <div class="container">
+ <div class="container container-fluid">
 
-     <div class="row row-cols-1 row-cols-md-3 g-3">
+     <div class="row  row-cols-1 row-cols-md-3 g-3">
          
-         <div class="col" v-for="skill in Resume" :key="skill.id" >
+         <div class="col my-card" v-for="skill in Resume" :key="skill.id" >
             <div class="card">
                 <div class="card-inner">
                     <div class="card-front">
@@ -72,7 +72,7 @@ export default {
 
 <style scoped>
 .card {
-  width: 300px;
+  width: 250px;
   height: 200px;
   -webkit-perspective: 1000px;
           perspective: 1000px;
@@ -141,4 +141,5 @@ export default {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
+
 </style>
