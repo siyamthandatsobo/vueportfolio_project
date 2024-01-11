@@ -1,14 +1,17 @@
 <template>
 <nav-comp></nav-comp>
 <footer-comp></footer-comp>
+
 </template>
 <script>
 import navComp from './components/navComp.vue'
 import footerComp from './components/footerComp.vue'
+
 export default{
   components:{
     navComp,
-    footerComp
+    footerComp,
+    
   }
 }
 </script>
