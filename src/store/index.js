@@ -7,7 +7,9 @@ export default createStore({
     resume:[],
     projects:[],
     reviews:[],
-    education:[]
+    education:[],
+    footer:[],
+    contentHeadings:[]
 
   },
   mutations: {
@@ -26,6 +28,13 @@ export default createStore({
     },
     setEducation(state, education) {
       state.education = education;
+    },
+    setFooter(state, footer) {
+      state.footer = footer;
+    },
+    setContentHeadings(state, contentHeadings) {
+      console.log(contentHeadings);
+      state.contentHeadings = contentHeadings;
     }
   },
   actions: {
@@ -74,6 +83,28 @@ export default createStore({
         commit('setEducation', response.data); // Commit the data to the Vuex store
       } catch (error) {
         console.error('Error fetching Resume:', error);
+
+      }
+    },
+    async getFooter({ commit }) {
+      try {
+        const response = await axios.get('http://localhost:3000/Footer');
+        console.log(response.data); 
+        console.log("This is a test"); // Check the structure of response.data
+        commit('setFooter', response.data); // Commit the data to the Vuex store
+      } catch (error) {
+        console.error('Error fetching Resume:', error);
+
+      }
+    },
+    async getContentHeadings({ commit }) {
+      try {
+        const response = await axios.get('http://localhost:3000/ContentHeadings');
+        console.log(response.data); 
+        console.log("This is a test"); // Check the structure of response.data
+        commit('setContentHeadings', response.data); // Commit the data to the Vuex store
+      } catch (error) {
+        console.error('Error fetching Headings:', error);
 
       }
     }
