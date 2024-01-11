@@ -1,6 +1,14 @@
 <template>
-<h1 class="display-2 mt-5 slide-in">Skills</h1>
- <div class="container container-fluid">
+
+<div v-if="Headings && Headings.length > 0">
+      <h2 class="display-2 mt-4 slide-in">{{ Headings[0].Heading }}</h2>
+      <h3>{{ Headings[0].description }}</h3>
+    </div>
+    <div v-else>
+      
+      <p>No headings available.</p>
+    </div>
+ <div class="container container-fluid cards-container">
 
      <div class="row  row-cols-1 row-cols-md-3 g-3">
          
@@ -27,12 +35,19 @@
       <p class="card-text">High school Diploma</p>
     </div>
   </div> -->
-  <h1 class="mt-5 display-1 slide-in" >Education</h1>
+  <div v-if="Headings && Headings.length > 0">
+      <h2 class="display-2 mt-4 slide-in">{{ Headings[1].Heading }}</h2>
+      <h3>{{ Headings[1].description }}</h3>
+    </div>
+    <div v-else>
+      
+      <p>No headings available.</p>
+    </div>
   <div class="container">
 
       <div class="row row-cols-1 row-cols-md-3 g-0">
           <div class="col" v-for="edu in Education" :key="edu.id">
-            <div class="card h-100">
+            <div class="card h-100 ">
                 <img :src="edu.url" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">{{ edu.School}}</h5>
@@ -51,6 +66,7 @@ export default {
       fetchData() {
         this.$store.dispatch('getResume');
         this.$store.dispatch('getEducation');
+        this.$store.dispatch('getContentHeadings');
          // Dispatch the 'getdata' action
       }
     },
@@ -64,6 +80,10 @@ export default {
       Education(){
         return this.$store.state.education || [] // Access 'resume' state from Vuex
 
+      },
+      Headings(){
+        return this.$store.state.contentHeadings || [] // Access 'resume' state from Vuex
+
       }
     }
   }
@@ -76,6 +96,7 @@ export default {
   height: 200px;
   -webkit-perspective: 1000px;
           perspective: 1000px;
+  margin: 20px;
 }
 
 .card-inner {
@@ -140,6 +161,9 @@ export default {
   font-size: 24px;
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
+}
+.container {
+  margin-bottom: 50px; /* Adjust this value as needed */
 }
 
 </style>

@@ -1,5 +1,12 @@
 <template>
-    <h1 class="display-2 slide-in">Reviews</h1>
+   <div v-if="Headings && Headings.length > 0">
+      <h2 class="display-2 mt-4 slide-in">{{ Headings[3].Heading }}</h2>
+      <h3>{{ Headings[3].description }}</h3>
+    </div>
+    <div v-else>
+      
+      <p>No headings available.</p>
+    </div>
     <div class="container">
 
         <div class="row row-cols-1 row-cols-md-2  row-cols-lg-3 g-4">
@@ -24,7 +31,8 @@
 export default {
     methods: {
       fetchData() {
-        this.$store.dispatch('getReviews'); // Dispatch the 'fetchdata' action
+        this.$store.dispatch('getReviews');
+        this.$store.dispatch('getContentHeadings'); // Dispatch the 'fetchdata' action
       }
     },
     mounted() {
@@ -33,6 +41,10 @@ export default {
     computed: {
       Reviews() {
         return this.$store.state.reviews || []
+      },
+      Headings(){
+        return this.$store.state.contentHeadings || [] // Access 'resume' state from Vuex
+
       }
     }
   }

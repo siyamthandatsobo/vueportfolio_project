@@ -1,7 +1,14 @@
 <template>
 
     
-    <h1 class="display-2 mt-5 slide-in">Projects</h1>
+<div v-if="Headings && Headings.length > 0">
+      <h2 class="display-2 mt-4 slide-in">{{ Headings[2].Heading }}</h2>
+      <h3>{{ Headings[2].description }}</h3>
+    </div>
+    <div v-else>
+      
+      <p>No headings available.</p>
+    </div>
     <div class="container">
       
         <div class="row row-cols-1 row-cols-md-3 g-3">
@@ -26,9 +33,7 @@
               
             </div>
           
-    <footer>
-        <p>&copy; Siyamthandatsobo</p>
-    </footer>
+    
   </template>
   
 
@@ -38,7 +43,8 @@
 export default {
     methods: {
       fetchData() {
-        this.$store.dispatch('getProjects'); // Dispatch the 'fetchdata' action
+        this.$store.dispatch('getProjects');
+        this.$store.dispatch('getContentHeadings'); // Dispatch the 'fetchdata' action
       }
     },
     mounted() {
@@ -47,6 +53,10 @@ export default {
     computed: {
       Projects() {
         return this.$store.state.projects || []
+      },
+      Headings(){
+        return this.$store.state.contentHeadings || [] // Access 'resume' state from Vuex
+
       }
     }
   }
@@ -60,12 +70,5 @@ export default {
   width:250px;
   margin:15px;
 }
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: rgb(51, 51, 51);
-  color: rgb(235, 20, 152);
-  bottom: 0;
-  width: 100%;
-}
+
 </style>
