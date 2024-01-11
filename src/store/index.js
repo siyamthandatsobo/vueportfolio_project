@@ -8,7 +8,6 @@ export default createStore({
     projects:[],
     reviews:[],
     education:[],
-    footer:[],
     contentHeadings:[]
 
   },
@@ -29,9 +28,6 @@ export default createStore({
     setEducation(state, education) {
       state.education = education;
     },
-    setFooter(state, footer) {
-      state.footer = footer;
-    },
     setContentHeadings(state, contentHeadings) {
       console.log(contentHeadings);
       state.contentHeadings = contentHeadings;
@@ -40,18 +36,18 @@ export default createStore({
   actions: {
     async getNavLinks({ commit }) {
       try {
-        const response = await axios.get('http://localhost:3000/navLinks');
+        const response = await axios.get('https://siyamthandatsobo.github.io/vueportfolio-data/');
         console.log(response.data); // Check the structure of response.data
-        commit('setNav', response.data); // Commit the data to the Vuex store
+        commit('setNav', response.data.navLinks); // Commit the data to the Vuex store
       } catch (error) {
         console.error('Error fetching Nvlinks:', error);
       }
     },
     async getResume({ commit }) {
       try {
-        const response = await axios.get('http://localhost:3000/Resume');
+        const response = await axios.get('https://siyamthandatsobo.github.io/vueportfolio-data/');
         console.log(response.data); // Check the structure of response.data
-        commit('setResume', response.data); // Commit the data to the Vuex store
+        commit('setResume', response.data.Resume); // Commit the data to the Vuex store
       } catch (error) {
         console.error('Error fetching Resume:', error);
       }
@@ -59,50 +55,40 @@ export default createStore({
 
     async getProjects({ commit }) {
       try {
-        const response = await axios.get('http://localhost:3000/Projects');
+        const response = await axios.get('https://siyamthandatsobo.github.io/vueportfolio-data/');
         console.log(response.data); // Check the structure of response.data
-        commit('setProjects', response.data); // Commit the data to the Vuex store
+        commit('setProjects', response.data.Projects); // Commit the data to the Vuex store
       } catch (error) {
         console.error('Error fetching Projects:', error);
       }
     },
     async getReviews({ commit }) {
       try {
-        const response = await axios.get('http://localhost:3000/Reviews');
+        const response = await axios.get('https://siyamthandatsobo.github.io/vueportfolio-data/');
         console.log(response.data); // Check the structure of response.data
-        commit('setReviews', response.data); // Commit the data to the Vuex store
+        commit('setReviews', response.data.Reviews); // Commit the data to the Vuex store
       } catch (error) {
         console.error('Error fetching Reviews:', error);
       }
     },
     async getEducation({ commit }) {
       try {
-        const response = await axios.get('http://localhost:3000/Education');
-        console.log(response.data); 
+        const response = await axios.get('https://siyamthandatsobo.github.io/vueportfolio-data/');
+        console.log(response.data.Education); 
         console.log("This is a test"); // Check the structure of response.data
-        commit('setEducation', response.data); // Commit the data to the Vuex store
+        commit('setEducation', response.data.Education); // Commit the data to the Vuex store
       } catch (error) {
         console.error('Error fetching Resume:', error);
 
       }
     },
-    async getFooter({ commit }) {
-      try {
-        const response = await axios.get('http://localhost:3000/Footer');
-        console.log(response.data); 
-        console.log("This is a test"); // Check the structure of response.data
-        commit('setFooter', response.data); // Commit the data to the Vuex store
-      } catch (error) {
-        console.error('Error fetching Resume:', error);
-
-      }
-    },
+    
     async getContentHeadings({ commit }) {
       try {
-        const response = await axios.get('http://localhost:3000/ContentHeadings');
+        const response = await axios.get('https://siyamthandatsobo.github.io/vueportfolio-data/');
         console.log(response.data); 
         console.log("This is a test"); // Check the structure of response.data
-        commit('setContentHeadings', response.data); // Commit the data to the Vuex store
+        commit('setContentHeadings', response.data.ContentHeadings); // Commit the data to the Vuex store
       } catch (error) {
         console.error('Error fetching Headings:', error);
 

@@ -1,6 +1,8 @@
 <template>
+  <div v-if="$store.state.resume.length>0">
 
-<div v-if="Headings && Headings.length > 0">
+    
+    <div v-if="Headings && Headings.length > 0">
       <h2 class="display-2 mt-4 slide-in">{{ Headings[0].Heading }}</h2>
       <h3>{{ Headings[0].description }}</h3>
     </div>
@@ -10,12 +12,12 @@
     </div>
  <div class="container container-fluid cards-container">
 
-     <div class="row  row-cols-1 row-cols-md-3 g-3">
-         
+   <div class="row  row-cols-1 row-cols-md-3 g-3">
+     
          <div class="col my-card" v-for="skill in Resume" :key="skill.id" >
             <div class="card">
                 <div class="card-inner">
-                    <div class="card-front">
+                  <div class="card-front">
                         <img :src="skill.url" width="200px" height="170px">
                     </div>
                     <div class="card-back">
@@ -25,7 +27,7 @@
             </div>
         </div>
     </div>
-</div>
+  </div>
     <!-- <h2 class="display-2 mt-5"> Education</h2>
   <div class="card mb-3">
     <div class="card-body">
@@ -36,33 +38,37 @@
     </div>
   </div> -->
   <div v-if="Headings && Headings.length > 0">
-      <h2 class="display-2 mt-4 slide-in">{{ Headings[1].Heading }}</h2>
-      <h3>{{ Headings[1].description }}</h3>
-    </div>
+    <h2 class="display-2 mt-4 slide-in">{{ Headings[1].Heading }}</h2>
+    <h3>{{ Headings[1].description }}</h3>
+  </div>
     <div v-else>
       
       <p>No headings available.</p>
+      {{ Headings }}
     </div>
-  <div class="container">
-
+    <div class="container">
       <div class="row row-cols-1 row-cols-md-3 g-0">
-          <div class="col" v-for="edu in Education" :key="edu.id">
-            <div class="card h-100 ">
-                <img :src="edu.url" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">{{ edu.School}}</h5>
-                    <p class="card-text">{{ edu.duration }}-{{edu.Qualification }}</p>
+        <div class="col" v-for="edu in Education" :key="edu.id">
+          <div class="card h-100 ">
+            <img :src="edu.url" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{ edu.School}}</h5>
+              <p class="card-text">{{ edu.duration }}-{{edu.Qualification }}</p>
                 </div>
                 
             </div>
-        </div>
+          </div>
     </div>
 </div>
 
+</div>
+<div v-else><spinner-comp></spinner-comp></div>
 </template>
 <script>
+import spinnerComp from '@/components/spinnerComp.vue';
 export default {
-    methods: {
+  components: { spinnerComp },
+  methods: {
       fetchData() {
         this.$store.dispatch('getResume');
         this.$store.dispatch('getEducation');
