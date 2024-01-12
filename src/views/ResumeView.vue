@@ -21,7 +21,7 @@
                         <img :src="skill.url" width="200px" height="170px">
                     </div>
                     <div class="card-back">
-                        <p>{{ skill.title }}</p>
+                        <p>{{ skill.title }}-{{skill.desc  }}</p>
                     </div>
                 </div>
             </div>

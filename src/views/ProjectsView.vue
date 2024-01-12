@@ -19,11 +19,11 @@
                       <div class="card-body">
                         <h5 class="card-title">{{ project.name}}</h5>
                         
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                        <a :href="project.github" class="btn btn-primary me-4" target="blank">github</a>
-                        <a :href="project.vercel" class="btn btn-primary" target="blank">vercel</a>
+                        <p class="card-text">{{ project.info }}</p>
+                        <a :href="project.github" class="btn bg-dark text-white me-4" target="blank">github</a>
+                        <a :href="project.netlify" class="btn btn-primary bg-dark text-white" target="blank"> netlify</a>
                       </div>
-                      <div class="card-footer bg-primary tex-white">
+                      <div class="card-footer bg-dark">
                         <!-- <small class="text-body-secondary  text-white">Last updated 3 mins ago</small> -->
                       </div>
                     </div>

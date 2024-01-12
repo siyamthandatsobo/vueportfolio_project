@@ -16,7 +16,14 @@
   </nav>
   <router-view/>
 </template>
+<style scoped>
 
+nav a:hover {
+  border-bottom: 3px solid #db34c8; 
+  border-top: 3px solid #34db42; 
+  border-left: 3px solid red; 
+}
+</style>
 
 
   <script>

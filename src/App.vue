@@ -47,7 +47,7 @@ nav a {
 }
 
 nav a.router-link-exact-active {
-  color: #000000;
+  color: #004369;
 }
 .slide-in {
   animation: slideInFromTop 1s ease-in-out; /* Modify the animation duration and timing function as needed */

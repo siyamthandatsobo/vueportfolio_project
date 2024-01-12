@@ -1,14 +1,16 @@
 <template>
    
 
-    <h1>Contact Me</h1>
+    <h1 class="display-2 mt-4 slide-in">Contact Me</h1>
         <div class="container">
             
             <div class="row ">
                 <!-- Form Column -->
+                
                 <div class="col-md-6">
                     <div class="form-container">
-                        <form class="form">
+                        <form class="form" action="https://formspree.io/f/mgegvakk"
+  method="POST">
                             <div class="form-group">
                                 <label for="name">Name</label>
                                 <input type="text" id="name" name="name">
