@@ -8,7 +8,8 @@ export default createStore({
     projects:[],
     reviews:[],
     education:[],
-    contentHeadings:[]
+    contentHeadings:[],
+    footer:[]
 
   },
   mutations: {
@@ -31,6 +32,10 @@ export default createStore({
     setContentHeadings(state, contentHeadings) {
       console.log(contentHeadings);
       state.contentHeadings = contentHeadings;
+    },
+    setFooter(state, footer) {
+      console.log(footer);
+      state.footer = footer;
     }
   },
   actions: {
@@ -91,6 +96,17 @@ export default createStore({
         commit('setContentHeadings', response.data.ContentHeadings); // Commit the data to the Vuex store
       } catch (error) {
         console.error('Error fetching Headings:', error);
+
+      }
+    },
+    async getFooter({ commit }) {
+      try {
+        const response = await axios.get('https://siyamthandatsobo.github.io/vueportfolio-data/');
+        console.log(response.data); 
+        console.log("This is a test"); // Check the structure of response.data
+        commit('setFooter', response.data.Footer); // Commit the data to the Vuex store
+      } catch (error) {
+        console.error('Error fetching Footer:', error);
 
       }
     }
