@@ -2,7 +2,6 @@
   <div class="container">
     <div class="row vh-100 align-items-center">
      
-      <!-- Centered text with download button and typing animation -->
       <div class="col-md-12 text-center">
         <div class="profile-text mt-3">
           <h1 class="display-4 text-white">
