@@ -1,111 +1,78 @@
 <template>
-  
-      <div class="container ">
-        <div class="row vh-100 justify-content-center align-items-center">
-          <!-- <div class="col-3">
-            <div class="align-items-start">
-              <img
-                class="img-fluid"
-                src="https://i.postimg.cc/qR4SywB3/SIYAMTHANDA-TSOBO-1-removebg-preview.png"
-                alt="logo"
-              />
-            </div>
-          </div> -->
-          <div class="col">
-            <h1 class="display-5 text-white text">Siyamthanda Tsobo</h1>
-            <br><br>
-            <p class="lead h4 text-light">
-              Aspiring full-stack developer that would like to specialise in
-              back-end.
-            </p>
-            </div>
-            <div class="col">
-              <div class="align-items-start">
-                <img
-                  class="img-fluid" id="siya"
-                  src="https://i.ibb.co/rsLzcMr/croppped-1.jpg"
-                  alt="logo"
-                />
-              </div>
-          </div>
-        </div>
-        </div>
-      
+  <div class="container">
+    <div class="row vh-100 align-items-center">
+     
+      <!-- Centered text with download button and typing animation -->
+      <div class="col-md-12 text-center">
+        <div class="profile-text mt-3">
+          <h1 class="display-4 text-white">
+            HELLO, my name is <span id="typed-name"></span>
+          </h1>
+          <h1 class="display-4 text-white">
+            I am a full-stack web developer.   </h1>
 
-
-  </template>
-  <!-- <div> -->
-<!--     
-    <h1>{{ homePage.title }}</h1>
-    <h2>{{ homePage.description }}</h2>
-    <img :src="homePage.profile" width="400px" height="300px">
+          
+          <button class="btn text-white mt-5 py-3" @click="downloadResume">Download Resume</button>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   methods: {
-    fetchData() {
-      this.$store.dispatch('getHomePage');
-    }
+    downloadResume() {
+      // Replace this with the actual link to your resume file
+      const resumeLink = 'https://drive.google.com/file/d/1ezDDE9BK2ux2kEECnSJMqtzI68IOAQT1/view?usp=sharing';
+
+      // Create a temporary anchor element to trigger the download
+      const downloadLink = document.createElement('a');
+      downloadLink.href = resumeLink;
+      downloadLink.download = 'Siyamthanda_Tsobo_Resume.pdf';
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+      document.body.removeChild(downloadLink);
+    },
+    startTypingAnimation() {
+      const name = "Siyamthanda Tsobo";
+      const typedNameElement = document.getElementById('typed-name');
+      let index = 0;
+
+      const typingInterval = setInterval(() => {
+        if (index <= name.length) {
+          typedNameElement.textContent = name.slice(0, index);
+          index++;
+        } else {
+          clearInterval(typingInterval);
+        }
+      }, 200); // Adjust the typing speed (milliseconds per character)
+    },
   },
   mounted() {
-    this.fetchData();
+    this.startTypingAnimation();
   },
-  computed: {
-    homePage() {
-      return this.$store.state.homePage[0] || {}; // Access the first element of the homePage array
+};
+</script>
+
+<style scoped>
+  /* Your existing styles here */
+
+  /* Styling for the typing animation */
+  #typed-name {
+    font-family: "Courier New", monospace; /* Change to your preferred font */
+    color: #ffd700; /* Typing color */
+    font-size: 5rem; /* Adjust the font size */
+    line-height: 6rem; /* Adjust the line height */
+  }
+  @media (max-width: 540px) {
+    #typed-name {
+      font-size: 2.5rem; /* Adjust font size for smaller screens */
+      line-height: 3rem; /* Adjust line height for smaller screens */
     }
   }
-}
-</script> -->
-<style scoped>
-.container {
-  width: 100%;
-  height: 100%;
-  --color: #a748f5;
-  background: linear-gradient(95deg, var(--color) 25%, transparent 25%) -50px 0,
-        linear-gradient(-15deg, var(--color) 25%, transparent 25%) -50px 0,
-        linear-gradient(25deg, transparent 75%, var(--color) 75%) -50px 0,
-        linear-gradient(-45deg, transparent 75%, var(--color) 75%) -50px 0,
-        linear-gradient(-15deg, transparent 75%, var(--color) 75%) -50px 0;
-  background-color: #b669fd;
-  background-size: 40px 40px;
-}
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600");
-h1 {
-  color: white;
-  font-family: "Playfair Display", Vidaloka, serif;
-  font-size: 6rem; /* Adjust the font size */
-  line-height: 1.2; /* Adjust the line height */
-  margin: 0; /* Remove any margin */
-}
-
-@media (max-width: 768px) {
-  h1 {
-    font-size: 1.8rem; /* Adjust the font size for smaller screens */
+  button{
+    background: #770699;
+    border-radius: 0%;
   }
-}
-img {
-  border-radius: 10%;
-}
-.text {
-  font-family: "Playfair Display", Vidaloka, serif;
-  border-right: solid 5px;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: typing 3s, cursor 2s step-end;
-}
-
-@keyframes cursor {
-  50% {
-    border-color: transparent;
-  }
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-}
 </style>

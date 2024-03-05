@@ -57,4 +57,5 @@ If you are looking for a dedicated and innovative developer with a passion for l
 img {
   border-radius: 10%;
 }
+
 </style>

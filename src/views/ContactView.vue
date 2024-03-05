@@ -116,6 +116,7 @@
 }
 
 .form-container .form-submit-btn {
+  position: relative; /* Add this line */
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -140,7 +141,11 @@
 }
 @media (max-width: 768px) {
   .form-container {
-    width: 250px; /* Adjust the font size for smaller screens */
+    width: 100%; /* Adjust the width for smaller screens */
+    max-width: 300px; /* Adjust the font size for smaller screens */
+  }
+  button{
+    padding:20px;
   }
 }
 

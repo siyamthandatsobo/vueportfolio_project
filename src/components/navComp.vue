@@ -28,7 +28,7 @@ nav a:hover {
 
   <script>
   export default {
-    methods: {
+    methods: { 
       fetchData() {
         this.$store.dispatch('getNavLinks'); // Dispatch the 'getdata' action
       }
